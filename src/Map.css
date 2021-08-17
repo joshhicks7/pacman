@@ -1,0 +1,80 @@
+.empty
+{
+    background-color: inherit;
+}
+
+.border
+{
+    background-color: rgb(10, 10, 12);
+    border-radius: 5%;
+}
+
+.pacman
+{
+    
+    border-radius: 50%; 
+    animation: munch .5s ease infinite;
+    
+}
+
+@keyframes munch
+{
+    0%
+    {
+        background-image:
+            linear-gradient(45deg, yellow 50%, transparent 50%),
+            linear-gradient(-45deg, transparent 50%, yellow 50%);
+    }
+    100%
+    {
+    background-image:
+        linear-gradient(0deg, yellow 100%, yellow 0%)
+    }
+}
+
+.node
+{
+    width:20px;
+    height:20px;
+    display: flex;
+    align-items: center;
+    
+}
+.node >*
+{
+    width:100%;
+    height:100%;
+}
+
+.fruit
+{
+    width:25%;
+    height:25%;
+    background: cyan;
+    border-radius:50%;    
+    border: 1px solid black;
+    margin:auto;
+}
+.enemy
+{
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    border-radius: 50% 50% 0% 0%;
+    background: rgb(255, 0, 0);    
+    margin:auto;
+}
+
+.Map
+{
+    display: flex;
+    flex-direction: column;
+    background: rgb(72, 72, 182);;
+    align-items: center;
+    width:fit-content;
+    margin:auto;
+}
+
+.map_row
+{
+    display: flex;    
+}
